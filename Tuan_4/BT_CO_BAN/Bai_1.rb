@@ -1,18 +1,17 @@
-array_242 = []
-Sum_242 = 0
-print "Nhap so phan tu: "
-numbers_242 = gets
-for i_242 in 1..numbers_242.to_i do 
-    print "array" + "[#{i_242}]: "
-    x_242 = gets
-    array_242.push x_242
-    # Sum_242 += array_242
+# Nhập các số vào mảng, in ra số lớn nhất, nhỏ nhất, giá trị trung bình của mảng.
+arr_242 = [];
+avg_242 = 0;
+print "Nhap so phan tu cua mang: ";
+numbers_242 = gets.to_i;
+for i in 0..numbers_242 -1
+    print "Array[#{i + 1}] : ";
+    value_242 = gets.to_i;
+    avg_242 += value_242;
+    arr_242.push(value_242);
 end
 
-# for i_242 in 1..numbers_242.to_i do 
-#     Sum_242 = Sum_242 + x_242
-# end
+avg_242 = avg_242/arr_242.length;
 
-print "Gia tri lon nhat cua mang: " + array_242.max
-print "Gia tri nho nhat cua mang: " + array_242.min
-# print "Gia tri trung binh cua mang: #{Sum_242 / array_242.length} " 
+puts "So lon nhat: #{arr_242.max}";
+puts "So nho nhat: #{arr_242.min}";
+puts "Gia tri trung binh: #{avg_242}";
