@@ -47,12 +47,7 @@ class Main
   
 
   def showInformation 
-    puts "Name: #{name} \nGender: #{gender} \nHeight: #{height} \nWeight: #{weight} \nEmail: #{email} \nPhone: #{phone}"
-    # puts "" 
-    # puts ""
-    # puts "Weight: #{weight}"
-    # puts "Email: #{email}"
-    # puts "Phone: #{phone}"
+    puts "\nName: #{name} \nGender: #{gender} \nHeight: #{height} \nWeight: #{weight} \nEmail: #{email} \nPhone: #{phone}"
   end
 
 end
@@ -124,8 +119,8 @@ end
 
 arrayStudent = Array.new
 student_1 =  Student.new("Nhan", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
-student_2 =  Student.new("\n ""Sy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
-student_3 =  Student.new("\n ""Huy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
+student_2 =  Student.new("Sy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
+student_3 =  Student.new("Huy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
 
 arrayStudent.push(student_1, student_2, student_3)
 
