@@ -61,3 +61,4 @@ arrayStudent.push(student_1, student_2, student_3)
 arrayStudent.each do |student|
   puts "#{student}"
 end 
+
