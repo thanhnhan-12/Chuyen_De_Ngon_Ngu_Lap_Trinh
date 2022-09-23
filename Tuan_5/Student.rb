@@ -41,41 +41,7 @@ class Student < Main
     @grade_3   = grade_3
   end
 
-  def age
-      @age
-  end
-  def age=(age)
-      @age = age
-  end
-
-  def address 
-    @address
-  end
-  def address=(address)
-      @address = address 
-  end
-
-  def className
-    @className 
-  end
-  def className=(className)
-    @className = className
-  end
-
-  def grade_1
-    @grade_1 end
-  def grade_1=(grade_1)
-    @grade_1 = grade_1 end
-
-  def grade_2
-    @grade_2 end
-  def grade_2=(grade_2)
-    @grade_2 = grade_2 end  
-
-  def grade_3
-    @grade_3 end
-  def grade_3=(grade_3)
-    @grade_3 = grade_3 end
+  attr_accessor :age, :address, :className, :grade_1, :grade_2, :grade_3
 
   def average
     (@grade_1 + @grade_2 + @grade_3 ) / 3.0
@@ -83,7 +49,7 @@ class Student < Main
 
   def showInformation 
     super
-    puts "Age: #{age} \nAddress: #{address} \nClassName: #{className} \nGrade 1: #{grade_1} \nGrade 2: #{grade_2} \nGrade 3: #{grade_3} \nAverage: #{average}   "
+    puts "Age: #{age} \nAddress: #{address} \nClassName: #{className} \nGrade 1: #{grade_1} \nGrade 2: #{grade_2} \nGrade 3: #{grade_3} \nAverage: #{average}"
   end
 
 end
@@ -96,5 +62,5 @@ student_3 =  Student.new("Huy", "Male", 58, 50, "huyquang@gmail.com", "093522218
 arrayStudent.push(student_1, student_2, student_3)
 
 arrayStudent.each do |student|
-  puts "#{student} "
+  puts "#{student}"
 end
