@@ -14,37 +14,8 @@ class Main
     @email  = email
     @phone  = phone
   end
-
-  def name
-    @name end
-  def name=(name)
-    @name = name end
-
-  def gender
-    @gender end
-  def gender=(gender)
-    @gender = gender end
-
-  def height
-    @height end
-  def height=(height)
-    @height = height end
-
-  def weight
-    @weight end
-  def weight=(weight)
-    @weight = weight end
   
-  def email
-    @email end
-  def email=(email)
-    @email = email end
-
-  def phone
-    @phone end
-  def phone=(phone)
-    @phone = phone end
-  
+  attr_accessor :name, :gender, :height, :weight, :email, :phone
 
   def showInformation 
     puts "\nName: #{name} \nGender: #{gender} \nHeight: #{height} \nWeight: #{weight} \nEmail: #{email} \nPhone: #{phone}"
@@ -119,8 +90,8 @@ end
 
 arrayStudent = Array.new
 student_1 =  Student.new("Nhan", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
-student_2 =  Student.new("Sy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
-student_3 =  Student.new("Huy", "Male", 58, 50, "nguyenthanhnhan12701@gmail.com", "0935222189", 21, "Da Nang", "19T2", 8, 7, 8).showInformation
+student_2 =  Student.new("Sy", "Male", 58, 50, "sybuivan@gmail.com", "0935222189", 21, "Quang Tri", "19T2", 8, 7, 8).showInformation
+student_3 =  Student.new("Huy", "Male", 58, 50, "huyquang@gmail.com", "0935222189", 21, "Kon Tum", "19T2", 8, 7, 8).showInformation
 
 arrayStudent.push(student_1, student_2, student_3)
 
