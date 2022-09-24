@@ -54,10 +54,12 @@ end
 
 arrayStudent = []
 student_1 = Student.new("Nhan", "Black", 58, 58, 21, "0935489523", "nguyenthanhnhan12701@gmail.com", "Vietnam", 9, 10, 7).showInformation
-student_2 = Student.new("Sy", "Black", 70, 68, 21, "0905215823", "sybuivan@gmail.com", "Vietnam", 9, 7, 6).showInformation
-student_3 = Student.new("Huy", "Black", 60, 88, 21, "0905215823", "sybuivan@gmail.com", "Vietnam", 7, 8, 10).showInformation
+student_2 = Student.new("Sy", "Black", 70, 68, 21, "0977258231", "sybuivan@gmail.com", "Vietnam", 9, 7, 6).showInformation
+student_3 = Student.new("Huy", "Black", 60, 88, 21, "0985215823", "sybuivan@gmail.com", "Vietnam", 7, 8, 10).showInformation
+student_4 = Student.new("Thien", "Black", 70, 98, 11, "0905444826", "vanthienpham@gmail.com", "Vietnam", 7, 10, 10).showInformation
 
 arrayStudent.push(student_1)
 arrayStudent.push(student_2)
 arrayStudent.push(student_3)
+arrayStudent.push(student_4)
 
