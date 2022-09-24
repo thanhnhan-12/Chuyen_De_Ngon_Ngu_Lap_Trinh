@@ -1,42 +1,42 @@
 class Human 
 
-  attr_accessor :name, :hair, :weight, :height, :age, :phone, :email, :nation
+  attr_accessor :name_242, :hair_242, :weight_242, :height_242, :age_242, :phone_242, :email_242, :nation_242
 
-  def initialize(name,hair,weight,height,age,phone,email,nation)
-    @name   = name
-    @hair   = hair
-    @weight = weight 
-    @height = height
-    @age    = age
-    @phone  = phone
-    @email  = email
-    @nation = nation
+  def initialize(name_242,hair_242,weight_242,height_242,age_242,phone_242,email_242,nation_242)
+    @name_242   = name_242
+    @hair_242   = hair_242
+    @weight_242 = weight_242 
+    @height_242 = height_242
+    @age_242    = age_242
+    @phone_242  = phone_242
+    @email_242  = email_242
+    @nation_242 = nation_242
   end
 
   def showInformation
-    puts "\nFullname: #{name} \nHair: #{hair} \nWeight: #{weight} \nHeight: #{height} \nAge: #{age} \nPhone: #{phone} \nEmail: #{email} \nNational: #{nation}"
+    puts "\nFullname: #{name_242} \nHair: #{hair_242} \nWeight: #{weight_242} \nHeight: #{height_242} \nAge: #{age_242} \nPhone: #{phone_242} \nEmail: #{email_242} \nNation: #{nation_242}"
   end
   
 end
 
 class Student < Human 
 
-  attr_accessor :mathGrades, :physicalGrades, :chemistryGrades
+  attr_accessor :mathGrades_242, :physicalGrades_242, :chemistryGrades_242
 
-  def initialize(name,hair,weight,height,age,phone,email,nation, mathGrades, physicalGrades, chemistryGrades)
-    super(name,hair,weight,height,age,phone,email,nation)
-    @mathGrades      = mathGrades
-    @physicalGrades  = physicalGrades
-    @chemistryGrades = chemistryGrades
+  def initialize(name_242,hair_242,weight_242,height_242,age_242,phone_242,email_242,nation_242, mathGrades_242, physicalGrades_242, chemistryGrades_242)
+    super(name_242,hair_242,weight_242,height_242,age_242,phone_242,email_242,nation_242)
+    @mathGrades_242      = mathGrades_242
+    @physicalGrades_242  = physicalGrades_242
+    @chemistryGrades_242 = chemistryGrades_242
   end
 
-  def average
-    (@mathGrades + @physicalGrades + @chemistryGrades ) / 3.0
+  def average_242
+    (@mathGrades_242 + @physicalGrades_242 + @chemistryGrades_242 ) / 3.0
   end
 
   def showInformation 
     super
-    puts "Grade 1: #{mathGrades} \nGrade 2: #{physicalGrades} \nGrade 3: #{chemistryGrades} \nAverage: #{average}"
+    puts "Math Grades: #{mathGrades_242} \nPhysical Grades: #{physicalGrades_242} \nChemistry Grades: #{chemistryGrades_242} \nAverage: #{average_242}"
   end
 
 end
@@ -59,7 +59,7 @@ for i in 0..(arrayStudent.length-1)
  end
 
 puts "====== Sorted student list :======= "
-studentsort = arrayStudent.sort_by{|student| [student.average]}.reverse
+studentsort = arrayStudent.sort_by{|student| [student.average_242]}.reverse
 for i in 0..(studentsort.length-1)
   puts "===== Student #{i+1} ===== "
   puts studentsort[i].showInformation
