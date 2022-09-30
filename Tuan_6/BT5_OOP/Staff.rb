@@ -2,7 +2,6 @@ class Canbo
   attr_accessor :name_242, :age_242, :gender_242, :address_242
 
   def initialize
-
   end 
 
   def enter_infomation
@@ -10,7 +9,7 @@ class Canbo
     @name_242 = gets.chomp
     print "Nhập tuổi : "
     @age_242 = gets.to_i
-    print "Nhập giới tính 1(nam) 0(nữ) 2(khác) : "
+    print "Nhập giới tính: "
     @gender_242 = gets.to_i
     print "Nhập địa chỉ : "
     @address_242 = gets.chomp
@@ -33,7 +32,7 @@ end
 
 
 class CongNhan < Canbo
-  attr_accessor :name_242, :age_242, :gender_242, :address_242, :bac
+  attr_accessor :name_242, :age_242, :gender_242, :address_242, :level_242
 
   def initialize
   end
@@ -41,18 +40,18 @@ class CongNhan < Canbo
   def enter_infomation
       super
       print "Nhập bậc : "
-      @bac = gets.chomp
+      @level_242 = gets.chomp
   end
 
   def info 
       super   
-      puts "Bậc : #{@bac}"
+      puts "Bậc : #{@level_242}"
   end
 
 end
 
 class KySu < Canbo
-  attr_accessor :name_242, :age_242, :gender_242, :address_242, :nganh
+  attr_accessor :name_242, :age_242, :gender_242, :address_242, :training_242
 
   def initialize
   end
@@ -60,17 +59,17 @@ class KySu < Canbo
   def enter_infomation
       super
       print "Nhập ngành đào tạo : "
-      @nganh = gets.chomp
+      @training_242 = gets.chomp
   end
 
   def info 
       super   
-      puts "Ngành : #{@nganh}"
+      puts "Ngành : #{@training_242}"
   end
 end
 
 class NhanVien < Canbo
-  attr_accessor :name_242, :age_242, :gender_242, :address_242, :congviec
+  attr_accessor :name_242, :age_242, :gender_242, :address_242, :work_242
 
   def initialize
   end
@@ -78,12 +77,12 @@ class NhanVien < Canbo
   def enter_infomation
       super
       print "Nhập công việc : "
-      @congviec = gets.chomp
+      @work_242 = gets.chomp
   end
 
   def info 
       super   
-      puts "Công việc : #{@congviec}"
+      puts "Công việc : #{@work_242}"
   end
 
 end
@@ -92,56 +91,56 @@ class QLCB
   def initialize
   end
 
-  $canbos = []
+  $canbos_242 = []
   
-  def addCanbo
+  def add
     puts"1. Nhâp công nhân :"
     puts"2. Nhâp Ky su :"
     puts"3. Nhập Nhân viên :"
     print "Mơi bạn chon : "
-    choose = gets.to_i
-    if choose ==1 
-        canbo =CongNhan.new
+    choose_242 = gets.to_i
+    if choose_242 ==1 
+        canbo_242 = CongNhan.new
       
-    elsif choose == 2
-        canbo =KySu.new
+    elsif choose_242 == 2
+        canbo_242 = KySu.new
     else 
-        canbo = NhanVien.new
+        canbo_242 = NhanVien.new
     end
-    canbo.enter_infomation
-    $canbos << canbo       
+    canbo_242.enter_infomation
+    $canbos_242 << canbo_242       
   end
 
-  def infomatinon 
-      puts "============Danh sách cán bộ là================"    
-      $canbos.each do |canbo|
-          puts canbo.info
+  def information 
+      puts "============ Thông tin ================"    
+      $canbos_242.each do |canbo_242|
+          puts canbo_242.info
       end
   end
 
 end
 
-$continute = true
-while $continute
+$continue_242 = true
+while $continue_242
 
-  quanly = QLCB.new
-  puts "1. thêm mới cán bộ."
+  qlcb_242 = QLCB.new
+  puts "1. Thêm mới cán bộ."
   puts "2. Tìm kiếm theo tên."
-  puts "3. Hiện thị thông tin danh sách cán bộ ."
-  puts "4 Thoát khỏi chương trình."
+  puts "3. Hiện thị thông tin danh sách cán bộ."
+  puts "4. Thoát khỏi chương trình."
 
-  print "Mời bạn chọn : "
-  choose = gets.to_i
+  print "Chọn chức năng bất kỳ: "
+  choose_242 = gets.to_i
 
-  case choose
+  case choose_242
   when 1
-      quanly.addCanbo
+      qlcb_242.add
   when 2
      puts "little child"
   when 3
-      quanly.infomatinon
+      qlcb_242.information
   else
-     puts "Xin tạm biệt!"
-      $continute = false
+     puts "Exit !"
+     $continue_242 = false
   end
 end
