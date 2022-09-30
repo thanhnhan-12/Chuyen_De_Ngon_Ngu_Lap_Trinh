@@ -1,167 +1,148 @@
 class CanBo
-  attr_accessor :name, :age, :gender, :address
+  attr_accessor :name_242, :age_242, :gender_242, :address_242
 
-  def initialize(name, age, gender, address)
-    @name = name 
-    @age = age
-    @gender = gender
-    @address = address
+  def initialize
   end
 
-  def initialize()
-
+  def initialize(name_242, age_242, gender_242, address_242)
+    @name_242 = name_242 
+    @age_242 = age_242
+    @gender_242 = gender_242
+    @address_242 = address_242
   end
 
   def input
-    print "Enter your name: "
-    name = gets
+    print "Enter your name_242: "
+    @name_242 = gets.chomp
 
-    print "Enter your age: "
-    age = gets.to_i
+    print "Enter your age_242: "
+    @age_242 = gets.to_i
 
-    print "Enter your gender: "
-    gender = gets.upcase
+    print "Enter your gender_242: "
+    @gender_242 = gets.to_i
 
-    print "Enter your address: "  
-    address = gets
+    print "Enter your address_242: "  
+    @address_242 = gets.chomp
   end
 
   def display
-    puts "Name: #{name} \nAge: #{age} \nGender: #{gender} \nAddress: #{address} "  
+    puts "Name_242: #{@name_242} \nAge_242: #{@age_242} \nGender_242: #{@gender_242} \nAddress_242: #{@address_242} "  
   end
 
 end
 
 class CongNhan < CanBo
-  attr_accessor :level
+  attr_accessor :level_242
 
-  def initialize(name, age, gnder, address, level)
-    super(name, age, gnder, address)
-    @level = level
-  end
-
-  def initialize()
-
+  def initialize
   end
 
   def input
     super
     print "Enter your level: "
-    level = gets.to_i
+    @level_242 = gets.chomp
   end
 
   def display
     super
-    puts "Level: #{level}"
+    puts "Level: #{@level_242}"
 
 end
 
 class KySu < CanBo
-  attr_accessor :training
+  attr_accessor :training_242
 
-  def initialize(name, age, gender, address, training)
-    super(name, age, gender, address)
-    @training = training
-  end
-
-  def initialize()
-
+  def initialize
   end
 
   def input
     super
     print "Enter your training: "
-    training = gets
+    @training_242 = gets.chomp
   end
 
   def display
     super
-    puts "Training: #{training}"
+    puts "Training: #{@training_242}"
   end
 
 end
 
 class NhanVien < CanBo
-  attr_accessor :work
+  attr_accessor :work_242
 
-  def initialize(name, age, gender, address, work)
-    super(name, age, gender, address)
-    @work = work
-  end
-
-  def initialize()
-
+  def initialize
   end
 
   def input
     super
-    print "Enter your work: "
-    work = gets
+    print "Enter your work_242: "
+    @work_242 = gets.chomp
   end
 
   def display
     super
-    puts "Work: #{work}"
+    puts "Work: #{@work_242}"
   end 
 
 end 
 
 class QLCB 
-  Canbo = []
+  $canbo_242 = []
+
+  def initialize
+  end
 
   def add
-    number
-      puts "===== Chon ====="
-      puts "1. Them moi can bo: "
-      puts "2. Tim kiem theo ho ten: "
-      puts "3. Hien thi danh sach: "
-      puts "4. Thoat chuong trinh: "
-      number = gets.to_i
-      site = number
-      case site 
-      when 1 
-        cn = CongNhan.new()
-        # cn.input
-        Canbo.push(cn.input)
-      when 2
-        ks = KySu.new()
-        # ks.input
-        Canbo.push(ks.input)
-      when 3
-        nv = NhanVien.new()
-        # nv.input
-        Canbo.push(nv.input)
-      when 4
-        puts "Thoat"
-      else
-        puts "Khong hop  le !"
-      end
-      
+    puts"1. Nhâp công nhân :"
+    puts"2. Nhâp Ky su :"
+    puts"3. Nhập Nhân viên :"
+    print "Mơi bạn chon : "
+    choose = gets.to_i
+    if choose ==1 
+        canbo_242 = CongNhan.new
+     
+    elsif choose == 2
+        canbo_242 = KySu.new
+    else 
+        canbo_242 = NhanVien.new
+    end
+    canbo_242.input 
+    $canbos_242 << canbo_242        
   end
 
-  def menu
-    numbers 
-      # puts "1. Them moi can bo: "
-      # puts "2. Tim kiem theo ho ten: "
-      # puts "3. Hien thi danh sach: "
-      # puts "4. Thoat chuong trinh: "
-      numbers = gets.to_i
-      site = numbers
-      case site 
-      when 1 
-        
-      when 2
-        break
-      when 3
-        break
-      when 4
-        break
-      else
-        puts "Khong hop le !"
-      end
-      
-
+  def infomatinon 
+    puts "============Danh sách cán bộ là================"    
+    $canbos_242.each do |canbo_242|
+        puts canbo_242.info
+    end
   end
-
 
 end 
+
+$continute_242 = true
+while $continute_242
+
+    quanly_242 = QLCB.new
+    puts "1. thêm mới cán bộ."
+    puts "2. Tìm kiếm theo tên."
+    puts "3. Hiện thị thông tin danh sách cán bộ ."
+    puts "4 Thoát khỏi chương trình."
+
+    print "Mời bạn chọn : "
+    choose_242 = gets.to_i
+
+    case choose_242
+    when 1
+        quanly_242.add
+    when 2
+       puts "little child"
+    when 3
+        quanly_242.infomatinon
+    else
+       puts "Xin tạm biệt!"
+        $continute_242 = false
+    end
+end
+
+end
