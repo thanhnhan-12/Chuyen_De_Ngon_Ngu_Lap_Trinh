@@ -134,11 +134,14 @@ while $continue_242
 
   case choose_242
   when 1
-      qlcb_242.add
+    qlcb_242.add
+
   when 2
-     puts "little child"
+    puts "little child"
+
   when 3
-      qlcb_242.information
+    qlcb_242.information
+
   else
      puts "Exit !"
      $continue_242 = false
