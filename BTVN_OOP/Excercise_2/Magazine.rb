@@ -1,4 +1,4 @@
-load "./Document.rb"
+require './Excercise_2/Document.rb';
 
 class Magazine < Document
   @issueNumber_242

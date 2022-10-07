@@ -1,4 +1,4 @@
-load "./Document.rb"
+require './Excercise_2/Document.rb';
 
 class Newspaper < Document
   @releaseDate_242
