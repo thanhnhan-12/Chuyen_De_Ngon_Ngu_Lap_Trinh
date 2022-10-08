@@ -12,7 +12,7 @@ class XeTai < ThongTin
 
   def infor
     super()
-    puts "Trong tai: #{@trongTai_242}"
+    puts "=> Trong tai: #{@trongTai_242}"
   end 
 
 end 

@@ -14,8 +14,8 @@ class XeMay < ThongTin
 
   def infor
     super()
-    puts "Cong xuat: #{@congXuat_242}"
-    puts "Dung tich: #{@dungTich_242}"
+    puts "=> Cong xuat: #{@congXuat_242}"
+    puts "=> Dung tich: #{@dungTich_242}"
   end 
 
 end 

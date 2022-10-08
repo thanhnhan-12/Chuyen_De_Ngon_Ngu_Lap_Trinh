@@ -20,11 +20,11 @@ class OTo < ThongTin
 
   def infor
     super()
-    puts "So cho ngoi: #{@soChoNgoi_242}"
-    puts "Kieu dong co: #{@kieuDongCo_242}"
-    puts "Nhien lieu: #{@nhienLieu_242}"
-    puts "So tui khi: #{@soTuiKhi_242}"
-    puts "Ngay dang kiem: #{@ngayDangKiem_242}"
+    puts "=> So cho ngoi: #{@soChoNgoi_242}"
+    puts "=> Kieu dong co: #{@kieuDongCo_242}"
+    puts "=> Nhien lieu: #{@nhienLieu_242}"
+    puts "=> So tui khi: #{@soTuiKhi_242}"
+    puts "=> Ngay dang kiem: #{@ngayDangKiem_242}"
   end 
 
 end 

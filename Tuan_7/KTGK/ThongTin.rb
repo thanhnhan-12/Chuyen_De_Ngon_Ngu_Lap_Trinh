@@ -20,13 +20,13 @@ class ThongTin
   end 
 
   def infor
-    puts "ID: #{@id_242}"
-    puts "Hang SX: #{@hangSX_242}"
-    puts "Nam SX: #{@namSX_242}"
-    puts "Dong xe: #{@dongXe_242}"
-    puts "Gia ban: #{@giaBan_242}"
-    puts "Bien so: #{@bienSo_242}"
-    puts "Mau Xe: #{@mauXe_242}"
+    puts "=> ID: #{@id_242}"
+    puts "=> Hang SX: #{@hangSX_242}"
+    puts "=> Nam SX: #{@namSX_242}"
+    puts "=> Dong xe: #{@dongXe_242}"
+    puts "=> Gia ban: #{@giaBan_242}"
+    puts "=> Bien so: #{@bienSo_242}"
+    puts "=> Mau Xe: #{@mauXe_242}"
   end 
 
 end 
