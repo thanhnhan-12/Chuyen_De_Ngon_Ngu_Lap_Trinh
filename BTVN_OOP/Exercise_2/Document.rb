@@ -12,7 +12,9 @@ class Document
   end 
 
   def infor
-    puts "ID: #{@docID_242} \nPublisher: #{@publisher_242} \nRelease: #{@releaseNumber_242}"
+    puts "=> ID: #{@docID_242} "
+    puts "=> Publisher: #{@publisher_242}"
+    puts "=> Release: #{@releaseNumber_242}"
   end 
 
 end 

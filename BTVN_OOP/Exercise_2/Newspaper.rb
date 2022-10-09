@@ -1,4 +1,4 @@
-require './Excercise_2/Document.rb';
+require './Exercise_2/Document.rb';
 
 class Newspaper < Document
   @releaseDate_242
@@ -12,7 +12,7 @@ class Newspaper < Document
 
   def infor 
     super()
-    puts "Release Date: #{@releaseDate_242} "
+    puts "=> Release Date: #{@releaseDate_242} "
   end 
 
 end 

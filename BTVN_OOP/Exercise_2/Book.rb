@@ -1,4 +1,4 @@
-require './Excercise_2/Document.rb';
+require './Exercise_2/Document.rb';
 
 class Book < Document
   @author_242
@@ -14,7 +14,8 @@ class Book < Document
 
   def infor 
     super()
-    puts "Author: #{@author_242} \nPage number: #{@pageNumber_242} "
+    puts "=> Author: #{@author_242} "
+    puts "=> Page number: #{@pageNumber_242}"
   end 
 
 end 

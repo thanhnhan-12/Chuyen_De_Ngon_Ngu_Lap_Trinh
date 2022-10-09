@@ -1,4 +1,4 @@
-require './Excercise_2/Document.rb';
+require './Exercise_2/Document.rb';
 
 class Magazine < Document
   @issueNumber_242
@@ -14,6 +14,7 @@ class Magazine < Document
 
   def infor 
     super()
-    puts "Issue number: #{@issueNumber_242} \nRelease month: #{@releaseMonth_242} "
+    puts "=> Issue number: #{@issueNumber_242} "
+    puts "=> Release month: #{@releaseMonth_242}"
   end 
 end 
